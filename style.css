@@ -1,0 +1,470 @@
+/* Fuente Font Yuruka */
+@font-face {
+    font-family: 'Yuruka';
+    src: url('./fonts/fot-yuruka-std.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f0eb;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8bbd0 ;
+    padding: 0.5rem 1rem;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    list-style: none;
+    font-family: Yuruka;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu > li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    color: #f48fb1; /* Cambiar color del texto al pasar el ratón */
+    transition: all 0.3s ease; 
+}
+
+
+/* Estilo para el icono del carrito */
+.cart {
+    position: relative; /* Necesario para el posicionamiento del contador */
+}
+
+/* Estilo de la imagen del carrito */
+.cart-icon {
+    width: 40px;  
+    height: 40px; 
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+/* Número de productos en el carrito */
+.cart-count {
+    position: absolute;
+    top: -5px; 
+    right: -5px; 
+    background-color: rgb(228, 30, 96);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+}
+
+/* Comportamiento al pasar el ratón sobre el icono */
+.cart-icon:hover {
+    transform: scale(1.1); 
+}
+
+/* Responsividad: Ajustar el tamaño del icono en pantallas pequeñas */
+@media (max-width: 768px) {
+    .cart-icon {
+        width: 35px; 
+        height: 35px;
+    }
+    .cart-count {
+        font-size: 12px; 
+    }
+}
+
+/* Submenús */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #a2d9ce;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    border-radius: 9px;
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    color: white;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #80cbc4;
+    color: white;
+}
+
+
+/* Modal personalizado Mensaje en pantalla */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #f8d7da; /* Color de fondo del modal */
+}
+
+.modal-title {
+    color: #721c24; /* Color del título */
+}
+
+.modal-body {
+    color: #721c24; /* Color del texto */
+}
+
+
+.carousel-caption {
+    position: relative;
+    z-index: 2; /* Asegura que el texto de la descripción esté encima del overlay */
+}
+
+/* Sección del catálogo */
+.catalogo {
+    padding: 2rem 1rem;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.catalogo .titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto {
+    /* background-color: #fff; */
+    border: 5px solid #f48fb1;
+    background-color: #a2d9ce;
+    border-radius: 7px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px #ac1346;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto-imagen {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción y se recorten si es necesario */
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+    margin-bottom: 1rem; /* Separación con el texto */
+}
+
+
+.producto-titulo {
+    font-size: 1.25rem;
+    font-family: "Parkinsans", sans-serif;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.producto-precio {
+    font-size: 1.2rem;
+    color: #3b3535;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #80cbc4;
+    font-family: "Parkinsans", sans-serif;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f3f0eb;
+    color: #3b3535;
+    font-weight:bold;
+}
+
+
+
+
+/* Banner genérico con overlay */
+.seccion-banner {
+    width: 100%;
+    height: 300px; /* Altura fija */
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    background-size: cover; /* Imagen ocupa todo el espacio */
+    background-position: center; /* Centra la imagen */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden; /* Oculta cualquier contenido que salga del área */
+}
+
+/* Overlay oscuro */
+.seccion-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.13); /* Fondo oscuro con transparencia */
+    z-index: 1; /* Asegura que el overlay esté por encima del fondo */
+}
+
+/* Texto del banner */
+.seccion-banner .banner-titulo {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Estilo general del footer */
+.footer {
+    background-color: #3b3535;
+    color: white;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #f48fb1;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #f48fb1;
+    text-decoration: underline;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+/* Enlaces útiles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon i {
+    font-size: 30px;  /* Tamaño de los iconos */
+    color: #f3f0eb;      /* Color predeterminado */
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover para los iconos */
+.social-icon i:hover {
+    color: #f48fb1;   /* Color al pasar el ratón */
+}
+
+.logo img {
+    height: 50px; /* Tamaño fijo del logo */
+}
+
+/* Asegura que el contenedor ocupe todo el espacio disponible */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    /* height: 100vh; /* La imagen estará centrada en toda la ventana */
+    background-color: #f0f0f0; /* Opcional: color de fondo */
+    overflow: hidden; /* Evita desplazamiento innecesario */
+}
+
+/* Hace que la imagen sea responsiva */
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta para que mantenga la proporción */
+}
+
+.card-img-top {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 200px; /* Ajusta la altura fija según tus necesidades */
+    object-fit: cover; /* Mantiene proporciones y recorta si es necesario */
+    border-radius: 5px; /* Opcional: agrega bordes redondeados */
+}
+
+.card {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para realce */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.row {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupará el ancho disponible */
+    max-width: 600px; /* Ajusta el máximo para limitar su tamaño */
+    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+/* Hacerlo responsivo */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px; /* Ajusta la altura para pantallas pequeñas */
+    }
+
+    .image-container img {
+        max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    }
+}
+
+.card-img-top {
+    width: 100%;       /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 900px;     /* Define una altura específica para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción sin deformar la imagen */
+}
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambia la dirección a columna para móvil */
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 20px; /* Espacio entre el logo y el menú */
+    }
+
+    .menu {
+        flex-direction: column; /* Coloca los elementos del menú en columna */
+        text-align: center;
+    }
+
+    .menu li {
+        margin-bottom: 10px; /* Espacio entre los elementos del menú */
+    }
+
+    .cart-icon {
+        width: 30px; /* Aumenta el tamaño del carrito en móviles */
+        height: 30px;
+    }
+}
+

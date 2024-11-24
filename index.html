@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Img/Nueva tlauacha_Blanca.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tlacuachita Shop</title>
+</head>
+
+<body> 
+  <nav class="navbar">
+      <div class="logo">
+          <img src="Img/Tlacuacha_letra.png" alt="Logotipo" />
+      </div>
+      <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          
+          <!-- Íconos para "Entrega y Envío" -->
+          <li class="dropdown">
+              <a href="" class="dropdown-toggle">
+                  <i class="bi bi-truck"></i> <!-- Icono de camión -->
+                  Entrega y envio
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a href="envios.html"><i class="bi bi-truck"></i> Envíos</a></li>
+                  <li><a href="Entregas.html"><i class="bi bi-box2-heart-fill"></i> Entrega</a></li>
+              </ul>
+          </li>
+
+          <!-- Íconos para "Productos" -->
+          <li class="dropdown">
+              <a href="" class="dropdown-toggle">
+                  <i class="bi bi-handbag-fill"></i> <!-- Icono de bolsa -->
+                  Productos
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a href="bolsas-1.html"><i class="bi bi-bag-heart-fill"></i> Bolsas</a></li>
+                  <li><a href="Maquillaje.html"><i class="bi bi-palette"></i> Maquillaje</a></li>
+                  <li><a href="joyeria.html"><i class="bi bi-gem"></i> Joyeria</a></li>
+                  <li><a href="exclusivos.html"><i class="bi bi-gift-fill"></i> Exclusivos</a></li>
+                  <li><a href="dulces-1.html"><i class="bi bi-hypnotize"></i> Dulces</a></li>
+              </ul>
+          </li>
+          
+          <li><a href="contactanos.html"><i class="bi bi-envelope-heart-fill"></i> Contacto</a></li>
+          
+          <!-- Botón de carrito -->
+          <li class="cart">
+              <a href="" data-bs-toggle="modal" data-bs-target="#emptyCartModal">
+                  <img src="Img/IconCarrito.png" alt="Carrito" class="cart-icon">
+                  <span class="cart-count">0</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+        
+    <!-- Modal de carrito vacío -->
+    <div class="modal fade" id="emptyCartModal" tabindex="-1" aria-labelledby="emptyCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emptyCartModalLabel">¡Carrito vacío!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Actualmente no hay productos en tu carrito. ✨¡Agrega algunos productos para comprar!✨
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Carrusel de imagenes-->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./Img/Carrusel/ProductosCarrusel1.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./Img/Carrusel/ProductosCarrusel2.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+          <div class="carousel-item">
+            <img src="./Img/Carrusel/ProductosCarrusel3.png" class="d-block w-100" alt="Producto_Carrusel   ">
+          </div>
+          <div class="carousel-item">
+            <img src="./Img/Carrusel/ProductosCarrusel4.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+          <div class="carousel-item">
+            <img src="./Img/Carrusel/ProductosCarrusel5.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+          <div class="carousel-item">
+            <img src="./Img/Carrusel/ProductosCarrusel6.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+          <div class="carousel-item">
+            <img src="./Img/Carrusel/ProductosCarrusel7.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+          <div class="carousel-item">
+            <img src="./Img/Carrusel/ProductosCarrusel8.jpeg" class="d-block w-100" alt="Producto_Carrusel  ">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- Banner de la segunda sección -->
+    <div class="seccion-banner" style="background-image: url('Img/Patrones/Baner_Principal.png');">
+        <h1 class="banner-titulo">❤️‍🔥OFERTAS🔥</h1>
+    </div>
+    
+
+    <!-- Sección del Catálogo -->
+    <section id="catalogo" class="catalogo">
+        <!-- <h1 class="titulo">Productos Nuevos</h1> -->
+        <div class="productos">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="Img/Productos/WhatsApp Image 2024-09-09 at 10.45.44 PM (1).jpeg" alt="ARETES DE ACERO" class="producto-imagen">
+                <h2 class="producto-titulo">Aretes de acero</h2>
+                <p class="producto-precio">$70 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="Img/Productos/bolsakiplin.jpeg" alt="Bolsa Kiplin" class="producto-imagen">
+                <h2 class="producto-titulo">Bolsa Kiplin</h2>
+                <p class="producto-precio">$400 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="img/Productos/ramune.jpeg" alt="Ramune" class="producto-imagen">
+                <h2 class="producto-titulo">Ramune de varios sabores</h2>
+                <p class="producto-precio">$70 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="Img/Productos/anillo.jpeg" alt="Anillo de acero" class="producto-imagen">
+                <h2 class="producto-titulo">Anillo de acero</h2>
+                <p class="producto-precio">$90 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="img/Productos/papitaspanda.jpeg" alt="Dulce Asiático" class="producto-imagen">
+                <h2 class="producto-titulo">papitas de panda</h2>
+                <p class="producto-precio">$20 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="img/Productos/Steve adden.jpeg" alt="Cartera" class="producto-imagen">
+                <h2 class="producto-titulo">cartera steve madden</h2>
+                <p class="producto-precio">$200 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="producto">
+                <img src="img/Productos/Mariposa.jpeg" alt="pinzas" class="producto-imagen">
+                <h2 class="producto-titulo">pinzas de flor y mariposa</h2>
+                <p class="producto-precio">$30 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="producto">
+                <img src="Img/Productos/carterabimbaylola.jpeg" alt="cartera bimba y lola" class="producto-imagen">
+                <h2 class="producto-titulo">catera bimba y lola</h2>
+                <p class="producto-precio">$200 MXN</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de la tercera sección -->
+    <div class="seccion-banner" style="background-image: url('Img/Patrones/Baner_Principal.png');">
+        <h1 class="banner-titulo">🩷REFERENCIAS🩷</h1>
+    </div>
+	
+	<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="Img/Productos/manita.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">salviart1</h5>
+        <p class="card-text">El mejor lugar para adquirir y encontrar los mejores detalles para esa persona especial.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">24 de julio</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="Img/Productos/cartera.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">~Nini</h5>
+        <p class="card-text">Muchas gracias, me hiciste un parote&nbsp;</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">15 de septiembre</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="Img/Productos/papas.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Carito</h5>
+        <p class="card-text">Mil gracias Ale🫶🏻</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">21 de noviembre</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="image-container">
+    <img src="Img/Productos/GRITANDO.png" alt="Descripción de la imagen">
+</div>
+</body>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Redes sociales -->
+        <div class="footer-section">
+            <h3>Síguenos en redes sociales</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61565745177160" target="_blank" class="social-icon">
+                    <i class="bi bi-facebook"></i> <!-- Icono de Facebook -->
+                </a>
+                <a href="https://www.instagram.com/tlacuachita_shop/" target="_blank" class="social-icon">
+                    <i class="bi bi-instagram"></i> <!-- Icono de Instagram -->
+                </a>
+                <a href="https://chat.whatsapp.com/EII2rDpWDYgBrB2cBvrDJq" target="_blank" class="social-icon">
+                  <i class="bi bi-whatsapp"></i> <!-- Icono de Whatsapp -->
+              </a>
+            </div>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>Email: <a href="mailto:contacto@ejemplo.com">TlacuachitaShop@gmail.com</a></p>
+            <p>Teléfono: <a href="tel:+52 56 1547 2694">+52 56 1547 2694</a></p>
+            <p>Ciudad de México, CDMX</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Tlacuachita Shop. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
