@@ -432,6 +432,10 @@ body {
     object-fit: cover; /* Mantiene la proporción sin deformar la imagen */
 }
 
+#unique-img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 
