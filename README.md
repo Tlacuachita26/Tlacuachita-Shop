@@ -1,2 +1,4 @@
 # Tlacuachita-Shop
-Página Web de la tlacuachita
+Pagina de ventas de la Tlacuachita Shop varios productos con la mejor calidad.
+
+# Recorrido:
